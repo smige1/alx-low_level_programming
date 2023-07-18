@@ -1,8 +1,10 @@
 #include <stdio.h>
 /**
-* main -print _putchar
-* is writen by smige
-* return: 0
+* print_alphabet - prints the lowercase alphabet, followed by a new line
+*
+* Description: This function prints the lowercase alphabet, followed by a new line.
+*
+* Return: void
 */
 
 void print_alphabet(void)

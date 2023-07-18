@@ -1,12 +1,17 @@
 #include <stdio.h>
 /**
-* main -print _putchar
-* is writen by smige
-* return: 0
+* add - adds two integers
+*
+* @a: the first integer
+* @b: the second integer
+*
+* Return: the sum of a and b
 */
-int add(int a, int b) {
+
+int add(int a, int b)
+{
 int sum;
 
 sum = a + b;
-return sum;
+return (sum);
 }

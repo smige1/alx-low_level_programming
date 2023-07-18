@@ -5,7 +5,7 @@
 * is writen by smige
 * Return: 0
 */
-int main(void) 
+int main(void)
 {
 printf("_putchar\n");
 return (0);

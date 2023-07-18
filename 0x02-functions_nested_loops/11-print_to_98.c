@@ -1,14 +1,18 @@
 #include <stdio.h>
 /**
-* main -print _putchar
-* is writen by smige
-* return: 0
+* print_to_98 - prints the numbers from n to 98
+*
+* @n: the starting number
+*
+* Return: void
 */
 
-void print_to_98(int n) {
+void print_to_98(int n)
+{
 int i;
 
-for (i = n; i <= 98; i++) {
+for (i = n; i <= 98; i++)
+{
 printf("%d, ", i);
 }
 printf("\n");

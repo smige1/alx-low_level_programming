@@ -1,33 +1,39 @@
-#include <stdio.h>
 #include "main.h"
-//A program that capitalizes all words of a string
+
+/**
+ * cap_string - capitalizes all words of a string
+ * @str: the string
+ * Return: str
+ */
 
 char *cap_string(char *str)
 {
-	int i = 0;
+	int index = 0;
 
-	while(str[i] != '\0')
+	while (str[index])
 	{
-		if((str[i] == ' ' || str[i] == '.') ||(str[i] == '\n' || str[i] =='\t'))
-		{	i++;
-			if(str[i] >= 'a' && str[i] <= 'z')
-			{
-				str[i] = str[i] - 32;
-			}
-		}
-		else
-			i++;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+
+		if (str[index - 1] == ' ' ||
+		    str[index - 1] == '\t' ||
+		    str[index - 1] == '\n' ||
+		    str[index - 1] == ',' ||
+		    str[index - 1] == ';' ||
+		    str[index - 1] == '.' ||
+		    str[index - 1] == '!' ||
+		    str[index - 1] == '?' ||
+		    str[index - 1] == '"' ||
+		    str[index - 1] == '(' ||
+		    str[index - 1] == ')' ||
+		    str[index - 1] == '{' ||
+		    str[index - 1] == '}' ||
+		    index == 0)
+			str[index] -= 32;
+
+		index++;
 	}
-	return str;
-}
 
-int main(void)
-{
-	char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 01234hello world\thello world.hello world\n";
-	char *ptr;
-
-	ptr = cap_string(str);
-	printf("%s", ptr);
-	printf("%s", str);
-	return 0;
+	return (str);
 }

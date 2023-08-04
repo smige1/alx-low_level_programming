@@ -8,17 +8,20 @@
  * Return: 0
  */
 
-int main(int argc, char **argv) {
-  int i;
+int main(int argc, char **argv)
+{
+	int i;
+	int count;
+	i = 0;
 
-  if (argc > 0) {
-    for (i = 1; i < argc; i++) {
-      if (!strstr(argv[i], "unsafe")) {
-        printf("%s\n", argv[i]);
-      }
-    }
-  }
+	if (argc > 0)
+	{
+		while (count < argc)
+		{
+			printf("%s\n", argv[i]);
+			i++;
+		}
+	}
 
-  return 0;
+	return (0);
 }
-

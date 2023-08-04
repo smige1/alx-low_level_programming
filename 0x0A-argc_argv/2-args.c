@@ -8,20 +8,12 @@
  * Return: 0
  */
 
-int main(int argc, char **argv)
-{
-	int i;
+int main(int argc, char *argv[]) {
+int i;
 
-	i = 0;
-
-	if (argc > 0)
-	{
-		while (count < argc)
-		{
-			printf("%s\n", argv[i]);
-			i++;
-		}
-	}
-
-	return (0);
+for (i = 1; i < argc; i++) {
+printf("%s\n", argv[i]);
 }
+return 0;
+}
+

@@ -8,11 +8,17 @@
  * Return: 0
  */
 
-int main(int argc, char *argv[]) {
-int i;
+int main(int argc, char **argv) {
+  int i;
 
-for (i = 1; i < argc; i++) {
-printf("%s\n", argv[i]);
+  if (argc > 0) {
+    for (i = 1; i < argc; i++) {
+      if (!strstr(argv[i], "unsafe")) {
+        printf("%s\n", argv[i]);
+      }
+    }
+  }
+
+  return 0;
 }
-return 0;
-}
+

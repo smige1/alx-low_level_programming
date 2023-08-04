@@ -1,28 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * main - multiplies and prints two numbers
+ * main - prints all arguments
  * @argc: count
  * @argv: argument
- * Return: 0 if true
- *         1 if false
+ * Return: 0
  */
 
 int main(int argc, char **argv)
 {
-	int a;
-	int b;
+	int i;
 
-	if (argc == 3)
+	i = 0;
+
+	if (argc > 0)
 	{
-		a = atoi(argv[1]);
-		b = atoi(argv[2]);
-		printf("%d\n", a * b);
-		return (0);
+		while (count < argc)
+		{
+			printf("%s\n", argv[i]);
+			i++;
+		}
 	}
 
-	printf("Error\n");
-	return (1);
+	return (0);
 }

@@ -3,28 +3,28 @@
 
 /**
  * *array_range - creates an array of integers
- * @min: minimum range of values stored
- * @max: maximum range of values stored and number of elements
+ * @low: minimum range of values stored
+ * @high: maximum range of values stored and number of elements
  *
  * Return: pointer to the new array
  */
-int *array_range(int lower, int higher)
+int *array_range(int low, int high)
 {
 	int *ptr;
 	int y, size;
 
-	if (lower > higher)
+	if (low > high)
 		return (NULL);
 
-	size = higher - lower + 1;
+	size = high - low + 1;
 
 	ptr = malloc(sizeof(int) * size);
 
 	if (ptr == NULL)
 		return (NULL);
 
-	for (y = 0; lower <= higher; y++)
-		ptr[y] = lower++;
+	for (y = 0; lower <= high; y++)
+		ptr[y] = low++;
 
 	return (ptr);
 }

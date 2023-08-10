@@ -3,26 +3,26 @@
 /**
  * _calloc - allocates memory for an array, using malloc
  *
- * @members: number of members
+ * @boyz: number of members
  * @size: size of each member
  * Return: pointer
  */
 
-void *_calloc(unsigned int members, unsigned int size)
+void *_calloc(unsigned int boyz, unsigned int size)
 {
 	unsigned int x;
 	char *ptr;
 
-	if (members== 0 || size == 0)
+	if (boyz== 0 || size == 0)
 		return (NULL);
 
-	ptr = malloc(members * size);
+	ptr = malloc(boyz * size);
 
 	if (ptr == NULL)
 		return (NULL);
 
 
-	for (x = 0; x < (members * size); x++)
+	for (x = 0; x < (boyz * size); x++)
 	{
 		ptr[x] = 0;
 	}

@@ -8,7 +8,7 @@
  * Return: pointer
  */
 
-void *_calloc(unsigned int boyz, unsigned int size)
+void *_calloc(size_t boyz, size_t size)
 {
 	unsigned int x;
 	char *ptr;

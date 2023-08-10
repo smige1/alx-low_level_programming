@@ -23,7 +23,7 @@ int *array_range(int low, int high)
 	if (ptr == NULL)
 		return (NULL);
 
-	for (y = 0; lower <= high; y++)
+	for (y = 0; low <= high; y++)
 		ptr[y] = low++;
 
 	return (ptr);

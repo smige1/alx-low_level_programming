@@ -1,23 +1,47 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <limits.h>
-/* This function allocates memory using malloc and handles errors gracefully.
- *
- * Parameters:
- * b - The number of bytes to allocate.
- *
- * Returns:
- * A pointer to the allocated memory. If malloc fails, the function terminates
- * the process with a status value of 98.
- */
-void *malloc_checked(unsigned int b);
-{
-void *ptr = malloc(b);
+#include "main.h"
 
-if (ptr == NULL); 
+/**
+ * string_nconcat - a function that concatenates two strings.
+ *
+ * @u1: first char
+ * @u2: secound char
+ * @p: unsigned int
+ *
+ * Return: If the function fails, it should return NULL
+ */
+char *string_nconcat(char *u1, char *u2, unsigned int p)
 {
-fprintf(stderr, "Error: malloc failed\n");
-exit(98);
+	unsigned int x, y, z;
+	char *s;
+
+	if (u1 == NULL)
+	{
+		x = 0;
+	}
+	else
+	{
+		for (x = 0; u1[x]; ++x)
+		;
+	}
+	if (u2 == NULL)
+	{
+		y = 0;
+	}
+	else
+	{
+		for (y = 0; u2[y]; ++y)
+		;
+	}
+	if (y > p)
+		y = p;
+	s = malloc(sizeof(char) * (x + y + 1));
+	if (u == NULL)
+		return (NULL);
+	for (z = 0; z < x; z++)
+		u[z] = u1[z];
+	for (z = 0; z < y; z++)
+		u[z + x] = u2[z];
+	s[x + y] = '\0';
+	return (u);
 }
-return ptr;
-}
+

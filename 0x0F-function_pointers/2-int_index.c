@@ -6,19 +6,19 @@
   * @size: size of the array
   * @ptr: pointer to the function
   *
-  * Return: return 1
+  * Return: return result
   */
-int int_index(int *arr, int size, int (*ptr)(int))
+int int_index(int *array, int size, int (*ptr)(int))
 {
 	int i = 0;
 
 	if (size > 0)
 	{
-		if (arr != NULL && ptr != NULL)
+		if (array != NULL && ptr != NULL)
 		{
 			while (i < size)
 			{
-				if (ptr(arr[i]))
+				if (ptr(array[i]))
 					return (i);
 
 				i++;

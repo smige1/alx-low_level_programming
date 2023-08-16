@@ -3,12 +3,13 @@
 #include <stdio.h>
 
 /**
-  * main - 
-  * @argc: argument count
-  * @argv: argument data
-  *
-  * Return: return null
-  */
+ * main - outputs the result of calculation program
+ *
+ * @argc: argument count
+ * @argv: argument data
+ * Return: Result
+ */
+
 int main(int argc, char *argv[])
 {
 	int (*oprt)(int, int);

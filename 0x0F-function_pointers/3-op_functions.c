@@ -3,82 +3,82 @@
 /**
  * op_add - adds two numbers
  *
- * @x: first integer
- * @y: second integer
+ * @a: first integer
+ * @b: second integer
  * Return: result
  */
 
-int op_add(int x, int y)
+int op_add(int a, int b)
 {
-	return (x + y);
+	return (a + b);
 }
 
 
 /**
  * op_sub - substract two numbers
  *
- * @x: first integer
- * @y: second integer
+ * @a: first integer
+ * @b: second integer
  * Return: result
  */
 
 
-int op_sub(int x, int y)
+int op_sub(int a, int b)
 {
-	return (x - y);
+	return (a - b);
 }
 
 
 /**
  * op_mul - multiplies two numbers
  *
- * @x: first integer
- * @y: second integer
+ * @a: first integer
+ * @b: second integer
  * Return: result
  */
 
 
-int op_mul(int x, int y)
+int op_mul(int a, int b)
 {
-	return (x * y);
+	return (a * b);
 }
 
 
 /**
  * op_div - divides two numbers
  *
- * @x: first integer
- * @y: second integer
+ * @a: first integer
+ * @b: second integer
  * Return: result
  */
 
-int op_div(int x, int y)
+int op_div(int a, int b)
 {
 
-	if (y == 0)
+	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	return (x / y);
+	return (a / b);
 }
 
 
 /**
  * op_mod - returns a modulo of a number divided by another
  *
- * @x: first integer
- * @y: second integer
+ * @a: first integer
+ * @b: second integer
  * Return: modulo
  */
 
-int op_mod(int x, int y)
+int op_mod(int a, int b)
 {
-	if (y == 0)
+	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	return (x % y);
+	return (a % b);
 }

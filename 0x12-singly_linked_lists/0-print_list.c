@@ -2,10 +2,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * print_list - list printed
- * h: point passed as argument
+ * struct list_s - singly linked list
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
+ * @next: points to the next node
  *
- * Return: nodes after success
+ * Description: singly linked list node structure
  */
 size_t print_list(const list_t *h)
 {

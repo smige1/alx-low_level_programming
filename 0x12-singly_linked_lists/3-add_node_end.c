@@ -3,34 +3,33 @@
 #include <string.h>
 
 /**
- * add_node_end - add element to the end of the list
- * @head: pointer to the first element
- * @str: string value for the elements
+ * add_node_end - Element end of the list
+ * @head: Elemet pointer
+ * @str:Element string values
  *
- * Return: Address of the new element
+ * Return: Element Address
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node, *current_node;
-	size_t n;
+	size_t p;
 
 	new_node = malloc(sizeof(list_t));
-	if (new_node == NULL)
-		return (NULL);
+		if (new_node == NULL)
+			return (NULL);
 
-	new_node->str = strdup(str);
+			new_node->str = strdup(str);
 
-	for (n = 0; str[n]; n++)
-		;
+			for (p = 0; str[p]; p++);
 
-	new_node->len = n;
-	new_node->next = NULL;
-	current_node = *head;
+		new_node->len = p;
+		new_node->next = NULL;
+		current_node = *head;
 
-	if (current_node == NULL)
-	{
-		*head = new_node;
-	}
+				if (current_node == NULL)
+		{	
+			*head = new_node;
+		}
 	else
 	{
 		while (current_node->next != NULL)

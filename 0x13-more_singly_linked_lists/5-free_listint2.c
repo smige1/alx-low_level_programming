@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * free_listint2 - frees a list and sets head to null
- * @head: the list
+ * free_listint2 - free sets head to null
+ * @head: the list of numbers
  *
- * Return: void
+ * Return: return void
  */
 void free_listint2(listint_t **head)
 {

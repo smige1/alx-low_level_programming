@@ -2,13 +2,13 @@
 
 /**
  * delete_nodeint_at_index - Deletes ......
- *                          
+ *
  * @head: the address of the pointer
- *        
+ *
  * @index: node to be deleted - indices 0.
  *
  * Return: On success - 1.
- *         On failure - -1.
+ *
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {

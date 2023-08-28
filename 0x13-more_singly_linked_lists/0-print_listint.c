@@ -7,15 +7,15 @@
  * Return: return 1
  */
 
-size_t print_listint(const listint_t *z)
+size_t print_listint(const listint_t *h)
 {
 	int len = 0;
 
-	while (z != NULL)
+	while (h != NULL)
 	{
-		printf("%d\n", z->n);
+		printf("%d\n", h->n);
 		len++;
-		z = z->next;
+		h = h->next;
 
 	}
 	return (len);

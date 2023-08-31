@@ -21,4 +21,5 @@ return (-1);
 if ((n & (1 << index)) == 0)
 		return (0);
 	/* Shift the mask to the left by the specified index.*/
+return (1);
 }

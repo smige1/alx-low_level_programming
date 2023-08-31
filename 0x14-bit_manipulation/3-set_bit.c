@@ -12,16 +12,14 @@
 int set_bit(unsigned long int *n, unsigned int index)
 {
 /* Check if the index is valid.*/
-if (index >= sizeof(unsigned long int) * 8)
-{
-	return (-1);
-}
-
+unsigned int q;
   /*Create a mask with the bit at the specified index set to 1.*/
-	unsigned long int mask = (1 << index);
+if (index > 63)
+		return (-1);
 
 	/* Set the bit at the specified index in n to 1 by using the bitwise.*/
-	*n |= mask;
+	q = 1 << index;
+	*n = (*n | q);
 
 /* Return success.*/
 return (1);

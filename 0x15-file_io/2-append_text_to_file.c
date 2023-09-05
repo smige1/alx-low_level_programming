@@ -1,36 +1,34 @@
 #include "main.h"
 
 /**
- * create_file - a function that creates a file
+ * append_text_to_file - Appends text at the end of a file.
+ * @filename: A pointer to the name of the file.
+ * @text_content: The string to add to the end of the file.
  *
- * @filename: name of file to create
- * @text_content: string to write to file
- *
- * Return: 1 on success OR -1 on faliure
-*/
-int create_file(const char *filename, char *text_content)
+ * Return: If the function fails or filename is NULL - -1.
+ *         If the file does not exist the user lacks write permissions - -1.
+ *         Otherwise - 1.
+ */
+int append_text_to_file(const char *filename, char *text_content)
 {
-	int file, write_status, words = 0;
+	int o, w, len = 0;
 
-	if (filename == NULL) /*check if filename is present*/
+	if (filename == NULL)
 		return (-1);
 
-	/*open file by creating it and if it exists write but truncate to 0*/
-	file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
-	if (file == -1) /*check if file creation was a success*/
-		return (-1);
-
-	if (text_content) /*write content to file if its not NULL*/
+	if (text_content != NULL)
 	{
-		while (text_content[words] != '\0') /*find number of words*/
-			words++;
-
-		/*write to file*/
-		write_status = write(file, text_content, words);
-		if (write_status == -1) /*check if write was a success*/
-			return (-1);
+		for (len = 0; text_content[len];)
+			len++;
 	}
 
-	close(file); /*close file*/
+	o = open(filename, O_WRONLY | O_APPEND);
+	w = write(o, text_content, len);
+
+	if (o == -1 || w == -1)
+		return (-1);
+
+	close(o);
+
 	return (1);
 }
